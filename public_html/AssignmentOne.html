@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment One</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 18pt;
+            }
+            h1{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Assignment One</h1>
+        <p>
+            This site calculates real root of quadratic equation.
+        </p>
+        <p>
+            If we want to know whether a quadratic graph intersects the x-axis, we can obtain the information by solving the quadratic equation.
+        </p>
+
+        <Script>
+
+            let a = prompt("Enter value of Coefficient of Xsqr");
+            let b = prompt("Enter value of Coefficient of X");
+            let c = prompt("Enter value of constant");
+
+            if (a === 0 && b === 0 && c === 0) {
+
+                alert("Value of a , b and c should be non zero");
+            }
+            document.writeln("Values of a, b and c are " + a + ", " + b + " and " + c + " respectively");
+            document.writeln("");
+            let discriminant = b * b - 4 * a * c;
+
+            let root = Math.sqrt(b * b - 4 * a * c);
+
+            let firstRoot = ((-b - root) / 2 * a);
+            let secondRoot = ((-b + root) / 2 * a);
+
+
+            document.writeln("discriminant = " + discriminant);
+            document.writeln("");
+            document.writeln("");
+            
+            
+            if (discriminant > 0) {
+                document.writeln("There are two real roots because dicriminant is greater than zero. Qyuadratic equation intersecpts X-axis at two different pionts i.e.");
+                document.writeln("");
+                document.writeln("(" + firstRoot + ", 0) and (" + secondRoot + ", 0)");
+            } else if (discriminant === 0) {
+                document.writeln("");
+                document.writeln("There is only one real root because discriminant is equal to zero. Quadratic equation intersecpts X-axis at a single point");
+                document.writeln("(" + firstRoot + ", 0)");
+            } else if (discriminant < 0) {
+                document.writeln("");
+                document.writeln("No real root exist because discriminant is less than zero. Quadratic equation does not intersecpts X-axis");
+
+            } else {
+                document.writeln("");
+                document.writeln("wrong values reload page again");
+            }
+
+
+
+
+        </script>
+    </body>
+</html>
+
